@@ -41,26 +41,40 @@ Even if setTimeout delay is 0*/
 
 //Que 4: Difference between Deep and Shallow copy
 
-let obj1 = {
-    a: 1,
-    b: {
-        c: 2,
+// let obj1 = {
+//     a: 1,
+//     b: {
+//         c: 2,
+//     }
+// }
+
+// // Shallow copy
+// let obj2 = {...obj1};
+// console.log(obj1);
+// // console.log(obj2);
+// // obj2.b.c = 4;
+// // console.log(obj1);
+// // console.log(obj2);
+
+// //Deep Copy
+
+// let obj3 = JSON.parse(JSON.stringify(obj1));
+
+// console.log(obj3);
+// obj3.b.c = 5;
+// console.log(obj1);
+// console.log(obj3);
+
+//Que 5 Difference between normal function an arrow function
+
+const obj = {
+    name: "sachin",
+
+    normalFun : function () {
+        console.log(this.name);
+    },
+    
+    arrowFun: () => {
+        console.log(this.name);
     }
 }
-
-// Shallow copy
-let obj2 = {...obj1};
-console.log(obj1);
-// console.log(obj2);
-// obj2.b.c = 4;
-// console.log(obj1);
-// console.log(obj2);
-
-//Deep Copy
-
-let obj3 = JSON.parse(JSON.stringify(obj1));
-
-console.log(obj3);
-obj3.b.c = 5;
-console.log(obj1);
-console.log(obj3);
